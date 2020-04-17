@@ -3,24 +3,14 @@ import ReactDOM from 'react-dom';
 import CV from './CV';
 
 const App = () => {
-    return React.createElement('div', {}, [
-        React.createElement('h1', {}, 'Hello from React'),
-        React.createElement(CV, {
-            name: 'John Doe',
-            profession: 'Web-developer',
-            spec: 'ReactJs',
-        }),
-        React.createElement(CV, {
-            name: 'Michael Grenn',
-            profession: 'Web-developer',
-            spec: 'VueJs',
-        }),
-        React.createElement(CV, {
-            name: 'Tom Ince',
-            profession: 'Web-developer',
-            spec: 'AngularJs',
-        }),
-    ]);
+    return (
+        <div>
+            <h1 className='h1'>Our Team</h1>
+            <CV name='John Doe' profession='Web-dev' spec='ReactJs' />
+            <CV name='Michael Green' profession='Web-dev' spec='VueJs' />
+            <CV name='Anna Doe' profession='Web-dev' spec='AngularJs' />
+        </div>
+    );
 };
 
-ReactDOM.render(React.createElement(App), document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
