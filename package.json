@@ -1,0 +1,31 @@
+{
+    "name": "proj",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "parcel src/index.html",
+        "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/michey85/react-course.git"
+    },
+    "keywords": [],
+    "author": "Mikhail Nepomnyashchiy",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/michey85/react-course/issues"
+    },
+    "homepage": "https://github.com/michey85/react-course#readme",
+    "devDependencies": {
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.10.1",
+        "parcel-bundler": "^1.12.4",
+        "prettier": "^2.0.4"
+    },
+    "dependencies": {
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1"
+    }
+}
