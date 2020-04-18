@@ -13,12 +13,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding-top: 2rem;
 }
 
 button {
-    padding: 2rem 4rem;
-    font-size: 4rem;
+    padding: 1rem 1.8rem;
+    font-size: 1.5rem;
 }
 
 .count {
@@ -26,4 +26,26 @@ button {
     font-size: 5rem;
     padding: 2rem 4rem;
     color: #fff;
+}
+
+input[type='search'] {
+    padding: 1rem 1rem;
+    font-style: 3rem;
+    color: #000;
+}
+
+.emptyResult {
+    font-size: 2rem;
+}
+
+.user-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 600px;
+}
+
+.user {
+    width: 150px;
+    overflow: hidden;
 }
