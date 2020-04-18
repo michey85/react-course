@@ -2,9 +2,28 @@
     box-sizing: border-box;
     color: #333;
 }
+html {
+    font-size: 10px;
+}
 
 body {
     background-color: #81a69b;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+button {
+    padding: 2rem 4rem;
+    font-size: 4rem;
+}
+
+.count {
+    display: inline-block;
+    font-size: 5rem;
+    padding: 2rem 4rem;
+    color: #fff;
 }
