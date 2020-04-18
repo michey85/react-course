@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function CV({ name, profession, spec, photo }) {
+export default function CV({ name, profession, spec, photo, children }) {
     return (
         <div className='my-4'>
             {photo && (
@@ -9,6 +9,7 @@ export default function CV({ name, profession, spec, photo }) {
             <h1 className='h1'>{name}</h1>
             <h2 className='h2'>{profession}</h2>
             <h2 className='h5'>{spec}</h2>
+            {children}
         </div>
     );
 }
