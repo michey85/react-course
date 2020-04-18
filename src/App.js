@@ -6,7 +6,7 @@ import ClickerFn from './ClickerFn';
 const App = () => {
     return (
         <div className='myApp'>
-            <ClickerFn />
+            <Clicker />
         </div>
     );
 };
