@@ -38,14 +38,37 @@ input[type='search'] {
     font-size: 2rem;
 }
 
-.user-list {
+.goods {
     display: flex;
     flex-wrap: wrap;
+    width: 600px;
     justify-content: space-between;
-    max-width: 600px;
 }
 
-.user {
-    width: 150px;
-    overflow: hidden;
+.basket {
+    position: absolute;
+    z-index: 2;
+    right: 10rem;
+    border: 2px solid black;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    max-width: 170px;
+}
+
+.basket__item {
+    position: relative;
+}
+
+.basket__itemDelete {
+    border: none;
+    background-color: transparent;
+    color: red;
+    font-weight: 900;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.basket__sum {
+    font-size: 1.5rem;
 }
