@@ -1,22 +1,54 @@
-import React, { useState, useEffect } from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ItemList from './components/ItemList';
 import Basket from './components/Basket';
 import { goods } from './data/goods';
 
-const App = () => {
-    const [orderedItems, setOrder] = useState([]);
+class App extends Component {
+    constructor() {
+        super();
+        this.state = {
+            orderedItems: [],
+            goods: goods,
+        };
+    }
 
-    const buyHandler = (item) => {
-        setOrder([...orderedItems, item]);
-    };
+    render() {
+        const buyHandler = (item) => {
+            this.setState({
+                orderedItems: [...this.state.orderedItems, item],
+                goods: [
+                    ...this.state.goods.map((good) => {
+                        if (good.name === item.name) {
+                            return {
+                                ...good,
+                                isOrdered: true,
+                            };
+                        } else {
+                            return good;
+                        }
+                    }),
+                ],
+            });
+        };
 
-    return (
-        <>
-            <Basket items={orderedItems} buyHandler={setOrder} />
-            <ItemList goods={goods} buyHandler={buyHandler} />
-        </>
-    );
-};
+        const removeHandler = (name) => {
+            const newOrder = this.state.orderedItems.filter(
+                (item) => item.name !== name
+            );
+            this.setState({ orderedItems: [...newOrder] });
+        };
+
+        return (
+            <>
+                <Basket
+                    items={this.state.orderedItems}
+                    removeHandler={removeHandler}
+                />
+                <ItemList goods={this.state.goods} buyHandler={buyHandler} />
+            </>
+        );
+    }
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
